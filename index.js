@@ -74,9 +74,9 @@ var QB = [
 //Global Score Variable
 var score = 0
 var scoreDB = [
-  {name: Ayesha, score: 10},
-  {name: Maheen, score: 10},
-  {name: Uzma, score: 9}
+  {name: "Ayesha", score: 10},
+  {name: "Maheen", score: 10},
+  {name: "Uzma", score: 9}
 ]
 
 //Function play
@@ -91,7 +91,7 @@ function play(question, answer) {
   } else {
     console.log(WA("Wrong :-("))
   }
-console.log(chalk.white("------------------------------------"));
+console.log(chalk.white("-------------------------------------------"));
 }
 
 //for loop
@@ -105,8 +105,9 @@ console.log()
 console.log("Your final score is " + score)
 console.log()
 if(score === scoreDB[0].score ){
-  console.log(chalk.bgYellowBright("Yay!! You beat the HighScore!!!"))
+  console.log(chalk.magentaBright("Yay!! You beat the HighScore!!!"))
   console.log(Q("Congratulations!"))
+  console.log()
 }
 if (score >= 7) {
   console.log(R("🎆Awwww you are the Goodest Friend!! :-) 🎆"))
