@@ -1,6 +1,6 @@
 //adding readlinesync
 var readlineSync = require("readline-sync");
-//adding or importing CHALK for that extra charm
+//adding or importing CHALK for that Style
 const chalk = require('chalk');
 //Defining my styles
 const h1 = chalk.bgBlackBright
@@ -22,18 +22,18 @@ console.log(h2("Let's start"));
 //Question Bank
 var QB = [
   {
-    question: "1) What is my middle name?  ",
-    answer: "Rafique"
+    question: "1) Initial of my middle name?  ",
+    answer: "R"
   },
 
   {
-    question: "2) What was my name before Ayesha?  ",
-    answer: "Anjum"
+    question: "2) What will I prefer, Coffee or Tea?  ",
+    answer: "Coffee"
   },
 
   {
-    question: "3) What is my birth month?  ",
-    answer: "July"
+    question: "3) My favorite season of the year?  ",
+    answer: "Winter"
   },
 
   {
@@ -42,18 +42,18 @@ var QB = [
   },
 
   {
-    question: "5) Am I an Android or iPhone person?  ",
-    answer: "Android"
+    question: "5) Cat person OR Dog person?  ",
+    answer: "both"
   },
 
   {
-    question: "6) Blue OR Red?  ",
+    question: "6) My fav color Blue OR Red?  ",
     answer: "Blue"
   },
 
   {
-    question: "7) What's my favorite number?  ",
-    answer: "Seven"
+    question: "7) Am I a Pizza or a Pasta Person?  ",
+    answer: "Pizza"
   },
 
   {
@@ -73,11 +73,7 @@ var QB = [
 ]
 //Global Score Variable
 var score = 0
-var scoreDB = [
-  {name: "Ayesha", score: 10},
-  {name: "Maheen", score: 10},
-  {name: "Uzma", score: 9}
-]
+
 
 //Function play
 
@@ -100,20 +96,34 @@ for (var i = 0; i < QB.length; i++) {
   play(currentQue.question, currentQue.answer);
 }
 
+var scoreDB = [
+  {name: "Mrunal", score: 10},
+  {name: "Ruchi", score: 10},
+  {name: "Muskan", score: 9}
+]
 //Final score
 console.log()
 console.log("Your final score is " + score)
 console.log()
 if(score === scoreDB[0].score ){
-  console.log(chalk.magentaBright("Yay!! You beat the HighScore!!!"))
+  console.log(chalk.magentaBright("Yay!! You've beaten the HighScore!!!"))
   console.log(Q("Congratulations!"))
+  console.log(Q("Take a screenshot and send it to me I'll update the scorenoard."))
   console.log()
 }
 if (score >= 7) {
-  console.log(R("🎆Awwww you are the Goodest Friend!! :-) 🎆"))
+  console.log("🎊🎉🎉🎉🎉🎉🎊")
+  console.log(R("You are the best one!!💛 "))
 }
 else if (score <= 6 && score > 3) {
-  console.log(R("Hey there friend. Lets meet soon."))
+  console.log(R("Hey there friend!😊 "))
 } else {
-  console.log(R("Yaaar koi nahi.. Better Luck Next Time ("))
+  console.log(R(":-("))
+}
+
+
+
+console.log("Score Board")
+for(var i = 0; i < scoreDB.length; i++){
+  console.log(scoreDB[i].name + ": "+ scoreDB[i].score);
 }
